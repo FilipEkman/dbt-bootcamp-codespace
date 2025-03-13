@@ -1,6 +1,6 @@
 -- AIRBNB.RAW.RAW_REVIEWS change column names
 with raw_reviews as(
-    select * from AIRBNB.RAW.RAW_REVIEWS
+    select * from {{ source('airbnb', 'reviews') }}
 )
 select
     listing_id,

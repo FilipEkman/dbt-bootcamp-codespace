@@ -1,6 +1,6 @@
 -- AIRBNB.RAW.RAW_HOSTS change column names
 with raw_hosts as(
-    select * from AIRBNB.RAW.RAW_HOSTS
+    select * from {{ source('airbnb', 'hosts') }}
 )
 select
     id as host_id,
